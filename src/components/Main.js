@@ -1,5 +1,6 @@
 import Heading from "./Heading.js";
 import Description from "./Description.js";
+import Skills from "./Skills.js";
 import Project from "./Project.js";
 const Main = () => {
     return (
@@ -11,8 +12,9 @@ const Main = () => {
         */
         
         <main>
-            <Heading />
+            {/* <Heading /> */}
             <Description />
+            <Skills />
             <Project/>
         </main>
     )

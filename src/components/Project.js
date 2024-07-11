@@ -2,12 +2,12 @@ const Project = () => {
   return (
     <>
       <div className="project w-full section center">
-        <div className="w-full h-full flex items-center">
-          <div className="cards w-full h-full grid grid-cols-2 gap-4 m-4">
-            <div className="card col-start-1 row-start-1 w-full h-full grid grid-row-4">
+        
+          <div className="cards w-full h-full grid grid-cols-2 gap-7 m-4  ">
+            <div className="card col-start-1 row-span-2 row-start-1 w-full   grid-row-4">
               <div className="cover-img ">
                 <img
-                  className="w-full h-full object-cover"
+                  className="image-cover w-full h-full object-cover"
                   src="./materials/ias.png"
                   alt="not found"
                 />
@@ -28,16 +28,16 @@ const Project = () => {
                 </a>
               </div>
             </div>
-            <div className="col-start-2 row-start-1 w-full h-full center">
+            <div className=" col-start-2 row-start-1 w-full h-full center">
               <div className="heading w-100 m-10">
                 My Projects
                 <p className="sub-heading">Things that I have built.</p>
               </div>
             </div>
-            <div className="card col-start-2 row-start-2 w-full h-full">
+            <div className="card col-start-2 row-start-2 w-full row-span-2">
               <div className="cover-img">
                 <img
-                  className="w-full h-full object-cover"
+                  className="image-cover w-full h-full object-cover"
                   src="./materials/music.png"
                   alt="not found"
                 />
@@ -55,10 +55,10 @@ const Project = () => {
                 </a>
               </div>
             </div>
-            <div className="card col-start-1 row-start-3 w-full h-full">
+            <div className="card col-start-1 row-start-3 w-full row-span-2">
               <div className="cover-img">
                 <img
-                  className="w-full h-full object-cover"
+                  className="image-cover w-full h-full object-cover"
                   src="./materials/diet.png"
                   alt="not found"
                 />
@@ -78,13 +78,13 @@ const Project = () => {
                 </a>
               </div>
                       </div>
-                      <div className="col-start-2 row-start-3 w-full h-full center">
+                      <div className="col-start-2 row-start-3 w-full row-span-2 center">
                           <div className="link-git"><a href="https://github.com/Deepakraj15?tab=repositories"> More Projects</a>
                     </div>
                       </div>
           </div>
         </div>
-          </div>
+        
           </>
   );
 };
