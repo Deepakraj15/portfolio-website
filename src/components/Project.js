@@ -1,10 +1,13 @@
+import { motion } from 'framer-motion';
 const Project = () => {
   return (
     <>
-      <div className="project w-full section center">
-        
+      <div className="project w-full section center " id="section2">
           <div className="cards w-full h-full grid grid-cols-2 gap-7 m-4  ">
-            <div className="card col-start-1 row-span-2 row-start-1 w-full   grid-row-4">
+           <motion.div initial={{ x: '-100%',opacity:0 }}
+           transition={{delay:0.5}}
+            whileInView={{x:'0',opacity:1}}
+            className="card col-start-1 row-span-2 row-start-1 w-full   grid-row-4">
               <div className="cover-img ">
                 <img
                   className="image-cover w-full h-full object-cover"
@@ -27,14 +30,21 @@ const Project = () => {
                   Go to Github
                 </a>
               </div>
-            </div>
-            <div className=" col-start-2 row-start-1 w-full h-full center">
+            </motion.div>
+            <motion.div initial={{ x: '100%' }}
+            whileInView={{ x: '0' }}
+               transition={{delay:0.5}}
+            className=" col-start-2 row-start-1 w-full h-full center">
               <div className="heading w-100 m-10">
                 My Projects
                 <p className="sub-heading">Things that I have built.</p>
               </div>
-            </div>
-            <div className="card col-start-2 row-start-2 w-full row-span-2">
+            </motion.div>
+          <motion.div initial={{ x: '100%',opacity:0 }}
+            
+            whileInView={{ x: '0',opacity:1 }}
+             transition={{delay:0.5}}
+            className="card col-start-2 row-start-2 w-full row-span-2">
               <div className="cover-img">
                 <img
                   className="image-cover w-full h-full object-cover"
@@ -54,8 +64,11 @@ const Project = () => {
                   Go to Github
                 </a>
               </div>
-            </div>
-            <div className="card col-start-1 row-start-3 w-full row-span-2">
+            </motion.div>
+            <motion.div initial={{ x: '-100%',opacity:0 }}
+              transition={{delay:0.5}}
+            whileInView={{x:'0',opacity:1}}
+            className="card col-start-1 row-start-3 w-full row-span-2">
               <div className="cover-img">
                 <img
                   className="image-cover w-full h-full object-cover"
@@ -77,11 +90,13 @@ const Project = () => {
                   Go to Github
                 </a>
               </div>
-                      </div>
-                      <div className="col-start-2 row-start-3 w-full row-span-2 center">
-                          <div className="link-git"><a href="https://github.com/Deepakraj15?tab=repositories"> More Projects</a>
-                    </div>
-                      </div>
+            </motion.div>
+          <motion.div initial={{ x: '100%',opacity:0 }}
+              transition={{delay:0.5}}
+            whileInView={{x:'0',opacity:1}}className="col-start-2 row-start-3 w-full row-span-2 center">
+            <div className="link-git"><a href="https://github.com/Deepakraj15?tab=repositories"> More Projects</a>
+            </div>
+            </motion.div>
           </div>
         </div>
         

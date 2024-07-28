@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion'
 import EngineeringIcon from "@mui/icons-material/Engineering";
 import BrushIcon from "@mui/icons-material/Brush";
 import CodeIcon from "@mui/icons-material/Code";
@@ -5,15 +6,23 @@ import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
 import IconList from "./IconList.js";
 const Skills = () => {
   return (
-    <div className="skills w-full h-screen section flex flex-col gap-5 ">
+    <motion.div className="skills w-full h-screen section flex flex-col gap-5 " id="section1">
       <div className="w-full h-5/6 grid grid-cols-3 grid-rows-2 place-items-center gap-4 ">
         <div className=" col-start-1 row-start-1 row-span-2 w-full h-full center">
-          <div className="heading w-100 m-10">
+          <motion.div
+            initial={{ x: -300 }}
+            whileInView={{x:0}}
+            className="heading w-100 m-10">
             My Skills
             <p className="sub-heading">Things that I have gained.</p>
-          </div>
+          </motion.div>
         </div>
-        <div className="skill w-full h-full col-start-2 row-start-1  flex-col center">
+        <motion.div
+          initial={{ x: '150%' }}
+          whileInView={{ x: 0 }}
+          whileHover={{ y: 10 }}
+          transition={{ ease: 'easeInOut' }}
+          div className="skill w-full h-full col-start-2 row-start-1  flex-col center">
           <div className="w-full h-3/6 center">
             <EngineeringIcon className="skill-icon" sx={{ fontSize: 50 }} />
             <p className="skill-icon-heading">Engineering</p>
@@ -25,8 +34,13 @@ const Skills = () => {
             scalable architecture, I deliver technically sound, user-friendly,
             market-ready solutions.
           </div>
-        </div>
-        <div className="skill w-full h-full col-start-3 row-start-1  flex-col center">
+        </motion.div>
+        <motion.div
+         initial={{ y: '150%' }}
+          whileInView={{ y: 0 }}
+          whileHover={{ y: 10 }}
+          transition={{ ease: 'easeInOut' }}
+          className="skill w-full h-full col-start-3 row-start-1  flex-col center">
           <div className="w-full h-3/6 center">
             <BrushIcon className="skill-icon" sx={{ fontSize: 50 }} />
             <p className="skill-icon-heading">Product Design</p>
@@ -37,8 +51,13 @@ const Skills = () => {
             and user-centered design, I craft products that are efficient,
             intuitive, and market-ready.
           </div>
-        </div>
-        <div className="skill w-full h-full col-start-2 row-start-2  flex-col center">
+        </motion.div>
+        <motion.div
+           initial={{ y: '-150%' }}
+          whileInView={{ y: 0 }}
+          whileHover={{ y: 10 }}
+          transition={{ ease: 'easeInOut' }}
+          className="skill w-full h-full col-start-2 row-start-2  flex-col center">
           <div className="w-full h-3/6 center">
             <CodeIcon className="skill-icon" sx={{ fontSize: 50 }} />
             <p className="skill-icon-heading">Programming</p>
@@ -51,8 +70,14 @@ const Skills = () => {
             commitment to quality and robust programming skills ensure
             excellence in every project.
           </div>
-        </div>
-        <div className="skill w-full h-full col-start-3 row-start-2  flex-col center">
+        </motion.div>
+        <motion.div
+          
+          initial={{ x: '-150%' }}
+          whileInView={{ x: 0 }} 
+          transition={{ ease: 'easeInOut' }}
+          whileHover={{ y: 10 }}
+          className="skill w-full h-full col-start-3 row-start-2  flex-col center">
           <div className="w-full h-3/6 center">
             <RecordVoiceOverIcon className="skill-icon" sx={{ fontSize: 50 }} />
             <p className="skill-icon-heading">Communication</p>
@@ -63,10 +88,10 @@ const Skills = () => {
             alignment among team members, stakeholders, and clients, leading to
             successful project outcomes.
           </div>
-        </div>
+        </motion.div>
       </div>
       <IconList />
-    </div>
+    </motion.div>
   );
 };
 
