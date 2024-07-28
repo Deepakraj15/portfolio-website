@@ -331,7 +331,10 @@ textarea:placeholder-shown{
   font-weight: 900;
   letter-spacing: 1px;
   border-radius: 7px;
-
+  transition: all 0.5s;
+}
+.submit-btn:hover{
+  transform: translateY(-5px);
 }
 .center{
   display: flex;

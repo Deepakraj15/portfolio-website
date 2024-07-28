@@ -47,7 +47,7 @@ export const Contact = () => {
           </motion.div>
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-y-9">
         
-        <div className="">
+        <div>
           <input
             type="text"
             name="name"
@@ -58,7 +58,7 @@ export const Contact = () => {
             className="w-2/5"
           />
         </div>
-        <div className="">
+        <div >
           <input
             type="email"
             name="email"
@@ -69,7 +69,7 @@ export const Contact = () => {
             className="w-2/5"
           />
         </div>
-        <div className="">
+        <div >
                   <textarea
                autoComplete='on'
                       cols={80}
@@ -80,10 +80,10 @@ export const Contact = () => {
             onChange={handleChange}
             placeholder="Your Message"
             required
-            className=""
+           
           />
         </div>
-        <div className="">
+        <div >
           <button
             type="submit"
             className="submit-btn w-2/5 h-8"
