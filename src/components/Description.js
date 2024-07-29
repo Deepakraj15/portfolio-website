@@ -19,16 +19,15 @@ const Description = () => {
   return (
     
       <div className="description w-full h-screen items-end section z-10">
-        <div className="nav-bar w-full h-1/6 z-20 grid grid-cols-10">
+        <div className="nav-bar w-full h-1/6 z-20 grid grid-cols-10 sm:grid-cols-5">
           <motion.div
             initial={{ x: -300,scale:1 }}
              whileInView={{x:0,scale:1.3}}
-           
-            className="nav-name col-span-2 col-start-1 center block w-full h-full"
+            className="nav-name col-span-2 sm:col-span-2 col-start-1 sm:col-start-1   center block w-full h-full"
           >
             Deepakraj K
         </motion.div>
-            <ScrollLink className="nav col-start-8 center block w-full h-full" to="section1" smooth={true} duration={500}>
+            <ScrollLink className="nav col-start-8  sm:col-start-3 center block w-full h-full" to="section1" smooth={true} duration={500}>
                         
             Skills
         </ScrollLink>
@@ -45,7 +44,7 @@ const Description = () => {
           
           
         </div>
-        <div className="z-10 absolute left-0 bottom-0 w-9/12 h-4/6">
+        <div className=" content-cont z-10 absolute left-0 bottom-0 w-9/12 h-4/6">
           <div className="content">
             <p className="tracking-widest uppercase">
               A Software Engineer

@@ -52,10 +52,7 @@ body {
   background-color: var(--text-primary);
 }
 
-.screen {
-  display: block;
-  background-color: var(--background);
-}
+
 
 .nav {
   cursor: pointer;
@@ -154,18 +151,25 @@ body {
   margin-top: 10px;
   transition: all 1s;
   border-radius: 7px;
+  transition: all 1s;
 }
 
 .skill:hover {
-  color: var(--background) !important;
   background-color: var(--accent-secondary);
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+  transition: all 1s;
 }
 
-.skill:hover > * {
-  color: var(--background);
-}
 
+.skill:hover >* >*{
+  
+   transform: translateY(-10px);
+   color: var(--background);
+}
+.skill:hover >* {
+   transform: translateY(-10px);
+   color: var(--background);
+}
 .skill-icon {
   color: var(--accent-primary);
 }
@@ -426,3 +430,60 @@ textarea:focus {
 footer {
   background-color: var(--text-primary);
 }
+
+/*TODO:
+    Configure different animations issues and find a solution for it
+*/
+ @media (max-width: 640px) {
+
+
+  .content-cont{
+    width: 100%;
+    height: 90%;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+  }
+ .content{
+  width: 75%;
+  position: absolute;
+  bottom: 10%;
+  font-size: 40px;
+ }
+ .personal-info{
+  font-size: 17px;
+ }
+ .nav-name{
+  font-size: 1rem;
+  transform: none !important;
+ }
+ .nav{
+  font-size: 0.75em;
+  padding: 20px;
+ }
+ .nav-bar{
+  width: 100%;
+  height: 10%;
+ }
+ .side-contact-list{
+  position: absolute;
+ margin: 0;
+  top:250px;
+  z-index: 9999;
+ }
+ .skill-icon-heading{
+  font-size: 19px;
+ }
+ .skill-card{
+  display:flex;
+  flex-direction: column;
+  row-gap: 20px;
+ }
+ .skill-content{
+  display: none;
+ }
+ /*
+ .heading{
+    skill heading is not working properly
+ } */
+} 

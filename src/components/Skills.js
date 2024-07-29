@@ -5,13 +5,15 @@ import CodeIcon from "@mui/icons-material/Code";
 import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
 import IconList from "./IconList.js";
 const Skills = () => {
+
+  
   return (
     <motion.div className="skills w-full h-screen section flex flex-col gap-5 " id="section1">
       <div className="w-full h-5/6 grid grid-cols-3 grid-rows-2 place-items-center gap-4 ">
         <div className=" col-start-1 row-start-1 row-span-2 w-full h-full center">
           <motion.div
-            initial={{ x: -300 }}
-            whileInView={{x:0}}
+            initial={{ x: '-100%' }}
+            whileInView={{x:'0'}}
             className="heading w-100 m-10">
             My Skills
             <p className="sub-heading">Things that I have gained.</p>
@@ -20,10 +22,10 @@ const Skills = () => {
         <motion.div
           initial={{ x: '150%' }}
           whileInView={{ x: 0 }}
-          whileHover={{ y: 10 }}
+          whileHover={{ x: -10, y: 10 }}
           transition={{ ease: 'easeInOut' }}
           div className="skill w-full h-full col-start-2 row-start-1  flex-col center">
-          <div className="w-full h-3/6 center">
+          <div className="skill-card w-full h-3/6 center">
             <EngineeringIcon className="skill-icon" sx={{ fontSize: 50 }} />
             <p className="skill-icon-heading">Engineering</p>
           </div>
@@ -38,10 +40,11 @@ const Skills = () => {
         <motion.div
          initial={{ y: '150%' }}
           whileInView={{ y: 0 }}
-          whileHover={{ y: 10 }}
+          whileHover={{ x: -10, y: 10 }}
+          
           transition={{ ease: 'easeInOut' }}
           className="skill w-full h-full col-start-3 row-start-1  flex-col center">
-          <div className="w-full h-3/6 center">
+          <div className="skill-card  w-full h-3/6 center">
             <BrushIcon className="skill-icon" sx={{ fontSize: 50 }} />
             <p className="skill-icon-heading">Product Design</p>
           </div>
@@ -55,10 +58,11 @@ const Skills = () => {
         <motion.div
            initial={{ y: '-150%' }}
           whileInView={{ y: 0 }}
-          whileHover={{ y: 10 }}
+          whileHover={{ x: -10, y: 10 }}
+          
           transition={{ ease: 'easeInOut' }}
           className="skill w-full h-full col-start-2 row-start-2  flex-col center">
-          <div className="w-full h-3/6 center">
+          <div className="skill-card  w-full h-3/6 center">
             <CodeIcon className="skill-icon" sx={{ fontSize: 50 }} />
             <p className="skill-icon-heading">Programming</p>
           </div>
@@ -76,9 +80,10 @@ const Skills = () => {
           initial={{ x: '-150%' }}
           whileInView={{ x: 0 }} 
           transition={{ ease: 'easeInOut' }}
-          whileHover={{ y: 10 }}
+          whileHover={{ x: -10, y: 10 }}
+          
           className="skill w-full h-full col-start-3 row-start-2  flex-col center">
-          <div className="w-full h-3/6 center">
+          <div className="skill-card  w-full h-3/6 center">
             <RecordVoiceOverIcon className="skill-icon" sx={{ fontSize: 50 }} />
             <p className="skill-icon-heading">Communication</p>
           </div>

@@ -58,7 +58,7 @@ export const Contact = () => {
     <div className="w-full h-screen grid grid-cols-2 items-center" id="section3">
       
       <motion.div
-        initial={{ x: -300 }}
+        initial={{ x: '-100%' }}
         whileInView={{ x: 0 }}
         className="heading-white w-100 m-10"
       >

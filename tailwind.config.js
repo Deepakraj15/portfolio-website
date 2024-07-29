@@ -5,6 +5,10 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    screens: {
+      'sm': { 'max': '640px' },
+      
+    },
     extend: {
       colors: {
         primary: 'var(--text-primary)',
