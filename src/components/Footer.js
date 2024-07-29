@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="w-100">
                 <h1 className="credits">Deepakraj K</h1>
                 <div className="link-resume">
-                    <a href="/DeepakrajK_Resume.pdf" download>
+                    <a href="/portfolio-website/DeepakrajK_Resume.pdf" download>
                         Download my resume
                     </a>
                 </div>
