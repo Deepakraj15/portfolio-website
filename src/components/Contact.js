@@ -2,9 +2,11 @@ import React, { useRef, useState } from 'react';
 import env from "react-dotenv";
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
+import Alert from '@mui/material/Alert';
 
 export const Contact = () => {
-   
+  const [isSuccess, setSuccess] = useState(false);
+
   const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
@@ -29,6 +31,11 @@ export const Contact = () => {
       .then(
         () => {
           console.log('SUCCESS!');
+          setTimeout(() => {
+            setSuccess(true);
+          }, 3000);
+          setSuccess(false);
+
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -37,53 +44,65 @@ export const Contact = () => {
   };
 
   return (
-      <div className="contact-page section w-full h-screen grid grid-cols-2 items-center" id="section3">
-           <motion.div
-            initial={{ x: -300 }}
-            whileInView={{x:0}}
-            className="heading-white w-100 m-10">
-            Contact Me
-            <p className="sub-heading">Send me an Email.</p>
-          </motion.div>
-      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-y-9">
-        
+  <div className='contact-page section w-full h-screen'>
+    {isSuccess && (
+        <motion.div
+          initial={{ y: -100,opacity:0 }}
+          animate={{ y: 0, opacity:1 }}
+          className="success-popup fixed top-0 start-2/4"
+          transition={{ ease: 'easeIn', duration: 1.5 }}
+        >
+          <Alert variant="filled" severity="success">Email sent successfully</Alert>
+        </motion.div>
+      )}
+    <div className="w-full h-screen grid grid-cols-2 items-center" id="section3">
+      
+      <motion.div
+        initial={{ x: -300 }}
+        whileInView={{ x: 0 }}
+        className="heading-white w-100 m-10"
+      >
+        Contact Me
+        <p className="sub-heading">Send me an Email.</p>
+      </motion.div>
+        <motion.form
+          initial={{ x:'100%'}}
+          whileInView={{x:0}}
+          ref={form} onSubmit={sendEmail} className="flex flex-col gap-y-9">
         <div>
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Your Name"
+            placeholder="Name"
             required
             className="w-2/5"
           />
         </div>
-        <div >
+        <div>
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Your Email"
+            placeholder="Email"
             required
             className="w-2/5"
           />
         </div>
-        <div >
-                  <textarea
-               autoComplete='on'
-                      cols={80}
-                      rows={9}    
-                      
+        <div>
+          <textarea
+            autoComplete="on"
+            
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Your Message"
+            placeholder="Message"
             required
-           
           />
         </div>
-        <div >
+        <div>
           <button
             type="submit"
             className="submit-btn w-2/5 h-8"
@@ -91,9 +110,8 @@ export const Contact = () => {
             Send
           </button>
         </div>
-      </form>
+      </motion.form>
+      </div>
     </div>
   );
-};
-
-export default Contact;
+}; export default Contact;

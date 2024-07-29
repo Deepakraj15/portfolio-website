@@ -119,17 +119,23 @@ body {
 }
 .contact-icon{
   border-radius: 50%;
-   
-  
 }
 .contact-icon:hover{
  
   
   transition: all 1s ;
   color: var(--text-secondary);
-
-  transform: rotateY(360deg) scale(1.2);
+   animation:1s linear 0.2s 1 rotate  ;
+  transform: rotateY(0) scale(1);
    
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg) scale(1);
+  }
+  to{
+    transform: rotateY(360deg) scale(1.2);
+  }
 }
 
 .personal-info{
@@ -289,41 +295,60 @@ i {
   background-color: var(--accent-primary);
 }
 input[type="text"],input[type="email"]{
+  height: 50px;
+  padding: 10px;
   text-indent: 10px;
   font-size: 17px;
   color: var(--background);
   background-color: transparent;
   outline: none;
-  border-bottom: 3px solid var(--background);
+  border: 3px solid var(--background);
   line-height: 5px;
   transition: all 0.5s;
    font-weight: 700;
+   border-radius: 7px;
 }
 input[type="text"]:placeholder-shown,input[type="email"]:placeholder-shown
 {
   text-indent: 10px;
   text-transform: uppercase;
-  color: var(--background);
+  color: var(--backgrousnd);
   line-height: 2px;
   font-family:"Merriweather" ;
-  padding: 5px;
-  font-size: 17px;
+  font-size: 13px;
   letter-spacing: 1.2px;
   font-weight: 700;
 }
+input[type="text"]:focus,input[type="email"]:focus{
+  color: var(--accent-secondary);
+  background-color: aliceblue;
+}
 textarea{
+  color: var(--background);
+  font-size: 13px;
   padding: 5px;
   text-indent: 10px;
   resize: none !important;
   border-radius: 7px;
   outline: none;
+  background-color: transparent;
+  outline: none;
+  border: 3px solid var(--background);
+  min-height:250px;
+  width: 75%;
+  font-weight: 500;
+  letter-spacing: 1.3px;
 }
 textarea:placeholder-shown{
   font-size: 17px;
   text-indent: 10px;
    font-size: 15px;
    transition: all 0.5s;
-
+  
+}
+textarea:focus{
+  color: var(--accent-secondary);
+  background-color: aliceblue;
 }
 .submit-btn{
   background-color: var(--background);
@@ -335,6 +360,12 @@ textarea:placeholder-shown{
 }
 .submit-btn:hover{
   transform: translateY(-5px);
+  background-color: var(--accent-secondary);
+  color: var(--background);
+}
+.success-popup{
+  width: 25%;
+  margin-top: 30px;
 }
 .center{
   display: flex;
@@ -382,7 +413,15 @@ textarea:placeholder-shown{
  transform: translateY(-5px);
 
 }
-
+.contact-footer{
+  color: var(--background);
+  margin-left: 20px;
+  font-weight: 500;
+  font-family:"Alfa Slab One";
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 footer{
     background-color:var(--text-primary);
 }

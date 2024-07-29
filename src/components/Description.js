@@ -2,7 +2,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import {  motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+ 
 import { Link as ScrollLink } from 'react-scroll';
 
 const Description = () => {
@@ -82,10 +83,10 @@ const Description = () => {
           whileInView={{ right: 0 }}
           className="side-contact-list flex flex-col absolute mt-16 gap-4 p-1"
         >
-          <a href=""><GitHubIcon className="contact-icon" sx={{ fontSize: 45 }} /></a>
-          <a href=""><LinkedInIcon className="contact-icon" sx={{ fontSize: 45 }} /></a>
-          <a href=""><InstagramIcon className="contact-icon" sx={{ fontSize: 45 }} /></a>
-          <a href=""><WhatsAppIcon className="contact-icon" sx={{ fontSize: 45 }} /></a>
+          <a title='Github' href="https://github.com/Deepakraj15"><GitHubIcon className="contact-icon" sx={{ fontSize: 45 }} /></a>
+          <a  title='LinkedIn' href="https://www.linkedin.com/in/deepakraj-k/"><LinkedInIcon className="contact-icon" sx={{ fontSize: 45 }} /></a>
+          <a title='Instagram' href=""><InstagramIcon className="contact-icon" sx={{ fontSize: 45 }} /></a>
+          <a title ='Whatsapp' href=""><WhatsAppIcon className="contact-icon" sx={{ fontSize: 45 }} /></a>
         </motion.div>
       </div>
  
