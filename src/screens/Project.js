@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 const Project = () => {
   return (
     <>
-      <div className="project w-full section center " id="section2">
+      <div className="project w-full section center " id="section3">
           <div className="cards w-full h-full grid grid-cols-2 gap-7 m-4  ">
            <motion.div initial={{ x: '-100%',opacity:0 }}
            transition={{delay:0.5}}
-            whileInView={{x:'0',opacity:1}}
+            whileInView={{x:'0%',opacity:1}}
             className="card col-start-1 row-span-2 row-start-1 w-full   grid-row-4">
               <div className="cover-img ">
                 <img

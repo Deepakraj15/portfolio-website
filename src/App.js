@@ -1,12 +1,15 @@
 
 import './App.css';
-import Main from './components/Main.js';
+import Main from './screens/Main.js';
 import Progressbar from './components/ProgressBar.js';
+import { usePlatform } from './hooks/usePlatform.js';
+import MobileMain from './screens/MobileMain.js';
 function App() {
+  const isMobileView = usePlatform();
   return (
     <>
-      <Progressbar/>
-      <Main />
+      <Progressbar />
+      {isMobileView? <MobileMain/>:< Main />}
     </>  
   );
 }

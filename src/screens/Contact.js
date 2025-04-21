@@ -55,7 +55,7 @@ export const Contact = () => {
           <Alert variant="filled" severity="success">Email sent successfully</Alert>
         </motion.div>
       )}
-    <div className="w-full h-screen grid grid-cols-2 items-center" id="section3">
+    <div className="w-full h-screen grid grid-cols-2 items-center" id="section4">
       
       <motion.div
         initial={{ x: '-100%' }}
@@ -94,7 +94,6 @@ export const Contact = () => {
         <div>
           <textarea
             autoComplete="on"
-            
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -105,7 +104,7 @@ export const Contact = () => {
         <div>
           <button
             type="submit"
-            className="submit-btn w-2/5 h-8"
+            className="submit-btn w-2/5 h-10"
           >
             Send
           </button>
